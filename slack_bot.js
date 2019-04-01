@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   var explain;
   if(req.body.token !== TOKEN){
-	res.status().send() ;
+	res.status(400).send() ;
   }
   if(!req.body.text){
 	res.status(400).send("specify a user") ;
