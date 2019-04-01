@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
   .then(function(json){
     if (json.message == "Not Found"){
       explain = "user not found" ;
-      res.status(404).send(explain) ;
+      res.end(explain) ;
     }
     else{
       if (!!ram){
@@ -36,7 +36,7 @@ app.post('/', (req, res) => {
         explain = `login: ${json.login}, name: ${json.name}, url: ${json.html_url}`
       }
     }
-    res.status(200).send(explain) ;
+    res.end(explain) ;
   })
 });
 // This code "exports" a function 'listen` that can be used to start
