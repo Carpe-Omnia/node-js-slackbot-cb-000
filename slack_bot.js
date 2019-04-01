@@ -26,7 +26,7 @@ app.post('/', (req, res) => {
   .then(function(json){
     if (json.message == "Not Found"){
       explain = "user not found" ;
-      res.status(200).send(explain) ;
+      res.status(404).send(explain) ;
     }
     else{
       if (!!ram){
