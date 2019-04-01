@@ -36,7 +36,7 @@ app.post('/', (req, res) => {
         explain = `login: ${json.login}, name: ${json.name}, url: ${json.html_url}`
       }
     }
-    res.send(explain) ;
+    res.status(200).send(explain) ;
   })
 });
 // This code "exports" a function 'listen` that can be used to start
