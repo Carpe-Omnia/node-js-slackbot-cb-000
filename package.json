@@ -10,10 +10,11 @@
     "test": "mocha -R mocha-multi --reporter-options spec=-,json=.results.json"
   },
   "dependencies": {
-     "body-parser": "^1.15.1",
-     "express": "^4.13.4",
-     "request-promise": "^3.0.0"
-   },
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "node-fetch": "^2.3.0",
+    "request-promise": "^3.0.0"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
