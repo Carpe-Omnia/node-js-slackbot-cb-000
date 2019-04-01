@@ -7,11 +7,13 @@ const app = express();
 const fetch = require('node-fetch');
 const TOKEN = 'ZoUY133ateZvvLKmOhF9lNAd';
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.get('/', (req, res) => {
+  res.status(200).send("Hello World") ;
+})
 app.post('/', (req, res) => {
   var explain;
   if(req.body.token !== TOKEN){
-	res.status(400).send() ;
+	res.status().send() ;
   }
   if(!req.body.text){
 	res.status(400).send("specify a user") ;
