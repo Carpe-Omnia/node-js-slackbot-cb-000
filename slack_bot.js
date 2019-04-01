@@ -20,7 +20,7 @@ app.post('/', (req, res) => {
 	res.status(400).send("specify a user") ;
   }
   var ram = req.body.text.slice(" ")[1] ;
-  var url = `https://api.github.com/users/${req.body.text.slice(" ")[0]}` ; 
+  var url = `https://api.github.com/users/${req.body.text.slice(" ")[0]}` ;
   fetch(url)
   .then(res => res.json())
   .then(function(json){
@@ -36,7 +36,7 @@ app.post('/', (req, res) => {
         explain = `login: ${json.login}, name: ${json.name}, url: ${json.html_url}`
       }
     }
-    res.send(explain) ; 
+    res.send(explain) ;
   })
 });
 // This code "exports" a function 'listen` that can be used to start
