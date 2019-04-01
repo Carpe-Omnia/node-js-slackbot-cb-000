@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const fetch = require('node-fetch');
 const TOKEN = 'ZoUY133ateZvvLKmOhF9lNAd';
-
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', (req, res) => {
   var explain;
