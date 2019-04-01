@@ -7,10 +7,7 @@ const app = express();
 const fetch = require('node-fetch');
 const TOKEN = 'ZoUY133ateZvvLKmOhF9lNAd';
 
-// Just an example request to get you started..
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+
 app.post('/', (req, res) => {
   var explain;
   if(req.body.token !== TOKEN){
