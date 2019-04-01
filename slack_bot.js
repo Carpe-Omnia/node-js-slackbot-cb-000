@@ -18,8 +18,8 @@ app.post('/', (req, res) => {
   if(!req.body.text){
 	res.status(404).send("specify a user") ;
   }
-  var ram = req.body.text.slice(" ")[1] ;
-  var url = `https://api.github.com/users/${req.body.text.slice(" ")[0]}` ;
+  var ram = req.body.text.split(" ")[1] ;
+  var url = `https://api.github.com/users/${req.body.text.split(" ")[0]}` ;
   console.log(url) ;
   fetch(url)
   .then(res => res.json())
