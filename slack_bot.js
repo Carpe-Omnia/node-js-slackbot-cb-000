@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
     }
     else{
       if (!!ram){
-        valor = json[`${ram}`] ;
+        var valor = json[`${ram}`] ;
         explain = `${ram}: ${valor}` ;
       }
       else{
