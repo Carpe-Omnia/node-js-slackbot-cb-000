@@ -16,7 +16,7 @@ app.post('/', (req, res) => {
 	res.status(400).send() ;
   }
   if(!req.body.text){
-	res.status(400).send("specify a user") ;
+	res.status(404).send("specify a user") ;
   }
   var ram = req.body.text.slice(" ")[1] ;
   var url = `https://api.github.com/users/${req.body.text.slice(" ")[0]}` ;
